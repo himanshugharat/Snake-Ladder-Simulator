@@ -2,6 +2,7 @@
 #constants
 START_POSITION=0
 position=$START_POSITION
+#complete game till 100!!!
 while [ $position -le 100 ]
 do
 	dieRoll=$((RANDOM%6 +1))
