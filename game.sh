@@ -20,18 +20,18 @@ case $option in
 	0)
 		position=$((position));;
 	1)
-		placeResult=$((position+dieRoll))
+		placeResult=$(( position + dieRoll ))
 		if [ $placeResult -le $WIN_PLACE ]
 		then
-			position=$((position+dieRoll))
+			position=$(( position + dieRoll ))
 			position="$(playOptions $(( RANDOM % 6 + 1 )) $(( RANDOM % 3 )) $position)"
 		else
 			position=$position
 		fi;;
-	2)	placeResult=$((position-dieRoll))
+	2)	placeResult=$(( position - dieRoll ))
 		if [ $placeResult -gt $START_POSITION ]
 		then
-			position=$((position-dieRoll))
+			position=$(( position - dieRoll ))
 		else
 			position=0
 		fi;;
